@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.url">jdbc:postgresql://localhost/un-admin</property> <!-- BD Mane -->
+		<!-- <property name="connection.driver_class">org.postgresql.Driver</property> -->
+		<property name="connection.username">postgres</property> <!-- DB User -->
+		<property name="connection.password">admin</property> <!-- DB Password -->
+		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property> <!-- DB Dialect -->
+		<property name="hbm2ddl.auto">update</property>
+
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		
+		<!-- entity config -->
+		<mapping resource="employee.xml" />
+		<mapping resource="department.xml" />
+	</session-factory>
+	
+</hibernate-configuration>
+
